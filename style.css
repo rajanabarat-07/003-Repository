@@ -1,0 +1,82 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", system-ui;
+    scrollbar-width: none;
+}
+
+nav {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    height: 80px;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: linear-gradient(62deg, #A100FFFF 51%, #1000FFFF 100%);
+    gap: 20px;
+}
+
+.marquee {
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 1000;
+    width: 650px;
+}
+
+.menu {
+    margin-right: 8%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0);
+    transition: background-color 1s;
+}
+
+a:hover {
+    background-color: aliceblue;
+    color: black;
+
+}
+
+.section1 {
+    text-align: center;
+    margin-top: 50px;
+    overflow-x: auto;
+    
+}
+
+.section1 h1 {
+    font-size: 40px;
+}
+
+.section1 h2 {
+    font-size: 20px;
+}
+
+.gambar {
+    width: 100%;
+    position: relative;
+    animation: progress;
+    animation-timeline: scroll();
+    transform-origin: 0%;
+    justify-content: left;
+}
+
+@keyframes progress {
+    0% {}
+
+}
+
