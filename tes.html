@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Data Pengukuran</title>
+    <style>
+        .outputDiv {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="">Lingkar Badan</label></td>
+            <td><input type="number" id="lingkarBadan" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lingkar Pinggang</label></td>
+            <td><input type="number" id="lingkarPinggang" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lingkar Pinggul</label></td>
+            <td><input type="number" id="lingkarPinggul" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lebar Dada</label></td>
+            <td><input type="number" id="lebarDada" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lebar Punggung</label></td>
+            <td><input type="number" id="lebarPunggung" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Panjang Muka</label></td>
+            <td><input type="number" id="panjangMuka" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Panjang Baju</label></td>
+            <td><input type="number" id="panjangBaju" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Panjang Rok</label></td>
+            <td><input type="number" id="panjangRok" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lebar Bahu</label></td>
+            <td><input type="number" id="lebarBahu" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lingkar Kerung Lengan</label></td>
+            <td><input type="number" id="lingkarKerungLengan" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Panjang Lengan</label></td>
+            <td><input type="number" id="panjangLengan" max="999" style="width: 50px;"></td>
+        </tr>
+        <tr>
+            <td><label for="">Lubang Bawah Lengan</label></td>
+            <td><input type="number" id="lubangBawahLengan" max="999" style="width: 50px;"></td>
+        </tr>
+    </table>
+    <button onclick="showInput()">Tampilkan Data</button>
+    <div id="outputDiv" class="outputDiv"></div>
+
+    <script>
+        function showInput() {
+            const inputValues = {
+                'Lingkar Badan': document.getElementById('lingkarBadan').value,
+                'Lingkar Pinggang': document.getElementById('lingkarPinggang').value,
+                'Lingkar Pinggul': document.getElementById('lingkarPinggul').value,
+                'Lebar Dada': document.getElementById('lebarDada').value,
+                'Lebar Punggung': document.getElementById('lebarPunggung').value,
+                'Panjang Muka': document.getElementById('panjangMuka').value,
+                'Panjang Baju': document.getElementById('panjangBaju').value,
+                'Panjang Rok': document.getElementById('panjangRok').value,
+                'Lebar Bahu': document.getElementById('lebarBahu').value,
+                'Lingkar Kerung Lengan': document.getElementById('lingkarKerungLengan').value,
+                'Panjang Lengan': document.getElementById('panjangLengan').value,
+                'Lubang Bawah Lengan': document.getElementById('lubangBawahLengan').value
+            };
+
+            let outputText = '';
+            for (const [key, value] of Object.entries(inputValues)) {
+                outputText += `${key}: ${value}<br>`;
+            }
+            document.getElementById('outputDiv').innerHTML = outputText;
+        }
+    </script>
+</body>
+</html>

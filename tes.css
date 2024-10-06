@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px; /* Jarak antar item */
+}
+
+.flex-item {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  flex-grow: 1; /* Semua item akan tumbuh untuk mengisi ruang */
+}
+
+.item1 {
+  flex-grow: 2; /* Item ini akan tumbuh dua kali lebih besar dari item lainnya */
+}
+
+.item2 {
+  flex-grow: 1; /* Item ini tumbuh dengan proporsi normal */
+}
+
+.item3 {
+  flex-grow: 1; /* Item ini tumbuh dengan proporsi normal */
+}
